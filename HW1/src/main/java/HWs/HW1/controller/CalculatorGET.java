@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class CalculatorGET { 
   
-    @RequestMapping(value={"/{operation}"}, method=RequestMethod.GET)
+    @RequestMapping(value={"/calc/{operation}"}, method=RequestMethod.GET)
     public @ResponseBody String getAttr(@PathVariable(value="operation") String operation, String x, String y) {
         float op1 = Float.parseFloat(x);
         float op2 = Float.parseFloat(y);

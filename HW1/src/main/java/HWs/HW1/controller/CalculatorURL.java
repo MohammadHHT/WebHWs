@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class CalculatorURL {
-    @RequestMapping(value={"/{operation}/{x}/{y}"})
+    @RequestMapping(value={"/calc/{operation}/{x}/{y}"})
     public @ResponseBody String getAttr(@PathVariable(value="operation") String operation,
                                         @PathVariable(value="x") String x,
                                         @PathVariable(value="y") String y) {
